@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>محمد سمير</title>
+<meta name="description" content="محمد سمير: قنواتي ومقالاتي وكل حساباتي في مكان واحد.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#062339;--ink2:#232033;--green:#016E4F;--sage:#61A573;--sand:#E3D0B0;--gold:#D7B200;--gold2:#EBBA06;--g2:#343434;--line:#1e4660;--mut:#b9ab8c}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:"Readex Pro",Tahoma,Arial,sans-serif;background:var(--ink);color:var(--sand);line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:10;background:rgba(6,35,57,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.logo{font-weight:700;font-size:1.15rem;color:var(--gold2);white-space:nowrap}
+.menu{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.menu a{padding:6px 14px;border-radius:999px;font-size:.92rem;white-space:nowrap;transition:background .15s}
+.menu a:hover{background:var(--green)}
+.hero{position:relative;overflow:hidden;min-height:88vh;display:flex;align-items:center;background:radial-gradient(120% 90% at 20% 30%,#0a3350 0%,var(--ink) 60%)}
+.topo{position:absolute;left:-8%;top:50%;width:min(95vw,900px);transform:translateY(-50%);pointer-events:none}
+.topo path{fill:none;stroke:var(--sage);stroke-width:1.2;opacity:.35}
+.topo path:nth-child(3n){stroke:var(--gold);opacity:.55}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.hero-in{display:flex;align-items:center;gap:40px;flex-wrap:wrap}
+.avatar{width:150px;height:150px;border-radius:50%;border:3px solid var(--gold);object-fit:cover;background:var(--ink2);flex:none}
+h1{font-size:clamp(3rem,9vw,6.4rem);line-height:1.1;font-weight:700}
+.lead{max-width:34ch;margin-top:18px;font-size:1.15rem;font-weight:300;color:#cdbf9f}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:12px 26px;border-radius:999px;font-weight:600;transition:transform .15s,background .15s;display:inline-block}
+.btn.p{background:var(--gold);color:var(--ink)}
+.btn.p:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn.s{border:1.5px solid var(--sage)}
+.btn.s:hover{background:var(--green)}
+section{padding:84px 0}
+.alt{background:var(--ink2)}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;margin-bottom:10px}
+.sub{color:var(--mut);font-weight:300;margin-bottom:34px;max-width:60ch}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:start}
+.about p{font-size:1.1rem;font-weight:300}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fact{border:1px solid var(--line);border-radius:12px;padding:18px}
+.fact b{display:block;color:var(--gold2);font-weight:600}
+.fact span{font-size:.9rem;color:var(--mut);font-weight:300}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.vbox{border-inline-start:5px solid var(--green);padding-inline-start:20px}
+.vbox.g{border-color:var(--gold)}
+.vbox h3{font-size:1.25rem}
+.vbox p{font-size:.95rem;color:var(--mut);font-weight:300;margin-bottom:14px}
+.frame{aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden}
+.frame iframe{width:100%;height:100%;border:0;display:block}
+.more{display:inline-block;margin-top:14px;color:var(--gold2);font-weight:600}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:2px;padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--ink);transition:border-color .15s,transform .15s,background .15s}
+.card:hover{border-color:var(--gold);transform:translateY(-3px);background:#0a2d46}
+.card .t{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:1.1rem}
+.card .t i{font-style:normal;color:var(--gold2)}
+.card small{color:var(--mut);font-weight:300;font-size:.92rem}
+.card.k{font-size:.8rem;color:var(--sage)}
+.art .card{background:var(--ink2)}
+.contact{text-align:center}
+.contact .sub{margin-inline:auto}
+footer{padding:36px 0;text-align:center;font-weight:300;color:#8f8268;font-size:.9rem;border-top:1px solid var(--line)}
+@media(max-width:820px){.about,.vgrid{grid-template-columns:1fr}.hero{min-height:80vh}.topo{left:-40%;width:130vw}section{padding:62px 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#home">محمد سمير</a>
+<div class="menu"><a href="#about">عني</a><a href="#videos">فيديوهاتي</a><a href="#articles">مقالاتي</a><a href="#projects">مشاريعي</a><a href="#links">روابطي</a><a href="#contact">تواصل</a></div></div></nav>
+
+<header class="hero" id="home">
+<svg class="topo" viewBox="0 0 600 600" aria-hidden="true">
+<path d="M300 40c110-6 215 62 245 160s-12 214-96 282-208 78-292 22S36 342 62 236 190 46 300 40z"/>
+<path d="M300 90c88-4 170 50 196 128s-8 170-76 224-166 62-232 16S84 334 108 250 212 94 300 90z"/>
+<path d="M300 140c68-2 126 40 146 98s-6 126-58 166-124 44-172 8S130 322 150 262s82-120 150-122z"/>
+<path d="M300 190c48 0 88 28 100 70s-6 90-44 118-90 28-122-2-36-76-18-112 52-72 84-74z"/>
+<path d="M300 240c28 0 52 18 56 44s-14 56-42 66-58-4-66-30 6-52 24-66 16-14 28-14z"/>
+<path d="M300 285c14 0 26 10 26 24s-14 32-30 32-26-12-22-26 14-30 26-30z"/>
+</svg>
+<div class="wrap"><div class="hero-in">
+<img class="avatar" src="https://ugc.production.linktr.ee/d0114766-b69b-4938-ae02-0f2f82d96175_Generated-Image-September-29--2025---3-19PM.png" alt="محمد سمير" onerror="this.style.display='none'">
+<div><h1>أنا محمد سمير</h1>
+<p class="lead">أهلاً بك. هنا قنواتي ومقالاتي وكل حساباتي في مكان واحد.</p>
+<div class="cta"><a class="btn p" href="#videos">شاهد فيديوهاتي</a><a class="btn s" href="#contact">تواصل معي</a></div></div>
+</div></div>
+</header>
+
+<section id="about"><div class="wrap">
+<h2>عني</h2><p class="sub">نبذة قصيرة، ويمكن تعديلها في أي وقت.</p>
+<div class="about">
+<p>أنا محمد سمير، مصري مقيم في المملكة العربية السعودية. أصوّر وأوثّق الأماكن التراثية والصحراوية وعادات الناس وتقاليدهم من خلال عدستي، وأقدّم على قناة ثانية محتوى عربي يشرح نظم المعلومات الجغرافية والخرائط الرقمية وسوق العمل.</p>
+<div class="facts">
+<div class="fact"><b>التصوير والتوثيق</b><span>تراث وسياحة السعودية</span></div>
+<div class="fact"><b>نظم المعلومات الجغرافية</b><span>كورسات ودروس بالعربي</span></div>
+<div class="fact"><b>الكتابة</b><span>مقالات على CNN بالعربية</span></div>
+<div class="fact"><b>المجتمع</b><span>تيليجرام وفيسبوك وبودكاست</span></div>
+</div></div>
+</div></section>
+
+<section class="alt" id="videos"><div class="wrap">
+<h2>فيديوهاتي</h2><p class="sub">قناتان على يوتيوب: واحدة للتعليم وواحدة للحياة والتراث في السعودية.</p>
+<div class="vgrid">
+<div class="vbox"><h3>نظم معلومات جغرافية بالعربي</h3><p>كورسات ودروس GIS وخرائط رقمية، وحديث عن سوق العمل.</p>
+<div class="frame"><iframe src="https://www.youtube.com/embed/videoseries?list=UUqWJETIRskFKBy00aIjU49g" title="قناة نظم معلومات جغرافية بالعربي" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+<a class="more" href="https://www.youtube.com/channel/UCqWJETIRskFKBy00aIjU49g?sub_confirmation=1" target="_blank" rel="noopener">عرض القناة على يوتيوب ↗</a></div>
+<div class="vbox g"><h3>محمد سمير Vlogs</h3><p>مصري في السعودية: أماكن تراثية وصحراوية وعادات وتقاليد.</p>
+<div class="frame"><iframe src="https://www.youtube.com/embed/videoseries?list=UUErIwka9hh-LJilZhZcXV5Q" title="قناة محمد سمير Vlogs" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+<a class="more" href="https://www.youtube.com/c/MuhammadSamirVlogger/featured?sub_confirmation=1" target="_blank" rel="noopener">عرض القناة على يوتيوب ↗</a></div>
+</div></div></section>
+
+<section class="art" id="articles"><div class="wrap">
+<h2>مقالاتي على CNN بالعربية</h2><p class="sub">قصص من أماكن في المملكة العربية السعودية. اضغط على أي بطاقة لقراءة المقال.</p>
+<div class="cards" data-list="articles"></div>
+</div></section>
+
+<section class="alt" id="projects"><div class="wrap">
+<h2>مشاريعي</h2><p class="sub">مواقع ومجتمعات عربية في نظم المعلومات الجغرافية والتصوير.</p>
+<div class="cards" data-list="projects"></div>
+</div></section>
+
+<section id="links"><div class="wrap">
+<h2>روابطي</h2><p class="sub">كل حساباتي في مكان واحد. اختر المنصة اللي تناسبك.</p>
+<div class="cards" data-list="links"></div>
+</div></section>
+
+<section class="alt contact" id="contact"><div class="wrap">
+<h2>خلينا على تواصل</h2>
+<p class="sub">كل طرق التواصل معي موجودة في صفحة واحدة.</p>
+<a class="btn p" href="https://linktr.ee/muhammad_samir" target="_blank" rel="noopener">كل روابطي على Linktree ↗</a>
+</div></section>
+<footer><div class="wrap">© محمد سمير</div></footer>
+
+<script>
+const D={
+articles:[
+["قصر المربع","مقر الملك عبد العزيز في الرياض","https://arabic.cnn.com/travel/article/2020/07/07/murabba-historical-palace-saudi-arabia-muhammad-samir"],
+["سوق الزل","الحراج القديم بمدينة الرياض","https://arabic.cnn.com/travel/article/2021/01/21/souq-al-zel-saudi"],
+["الوادي الخفي","وجهة طبيعية في الرياض","https://arabic.cnn.com/travel/article/2020/12/16/hidden-canyon-saudi-riyadh"],
+["أبراج الحمام","الدلم، الرياض (فيديو)","https://arabic.cnn.com/travel/video/2025/03/04/v169603-saudi-al-dalam-pigeon-towers-photography"]],
+projects:[
+["موقع نظم معلومات جغرافية بالعربي","المدونة الجغرافية: كل ما يخص GIS بالعربية","https://arabicgis.com/"],
+["أعمالي على Behance","تصوير وفيديو وتصميم عن التراث السعودي","https://www.behance.net/muhammad_samir_"],
+["صفحة نظم معلومات بالعربي","مجتمع GIS على فيسبوك","https://www.facebook.com/ArabicGis"]],
+links:[
+["يوتيوب: GIS بالعربي","كورسات ودروس","https://bit.ly/2USierL"],
+["يوتيوب: Vlogs","الحياة والتراث في السعودية","https://bit.ly/3Lr1gIz"],
+["لينكدإن","التواصل المهني","https://www.linkedin.com/in/muhammad-samir-6a7a5657/"],
+["إنستجرام","صور وكواليس","https://www.instagram.com/muhammad_samir_vlogger/"],
+["تيك توك","مقاطع قصيرة","https://www.tiktok.com/@muhammad.samir.vlogs"],
+["فيسبوك","الحساب الشخصي","https://www.facebook.com/muhammadssamir"],
+["صفحة التصوير الفوتوغرافي","أعمال التصوير على فيسبوك","https://www.facebook.com/MuhammadSamirs"],
+["قناة تيليجرام GIS","أخبار ومصادر نظم المعلومات الجغرافية","https://t.me/ArabicGIS"],
+["مجتمع GIS على تيليجرام","نقاش وأفكار بين المهتمين","https://t.me/GIS_Comm_Ideas"]]};
+document.querySelectorAll("[data-list]").forEach(el=>{
+el.innerHTML=D[el.dataset.list].map(([t,s,u])=>`<a class="card" href="${u}" target="_blank" rel="noopener"><span class="t">${t}<i>↗</i></span><small>${s}</small></a>`).join("")});
+</script>
+</body>
+</html>
