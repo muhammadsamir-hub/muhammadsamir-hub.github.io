@@ -26,10 +26,13 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .topo{position:absolute;right:-8%;top:50%;width:min(95vw,900px);transform:translateY(-50%);pointer-events:none}
 .topo path{fill:none;stroke:var(--sage);stroke-width:1.2;opacity:.35}
 .topo path:nth-child(3n){stroke:var(--gold);opacity:.55}
-.hero .wrap{position:relative;z-index:1;width:100%}
+.hero .wrap{position:relative;z-index:1;width:100%;max-width:1180px}
+html[dir=ltr] .hero-in{flex-direction:row}
+.lang{font:600 .85rem inherit;font-family:inherit;background:transparent;color:var(--gold2);border:1.5px solid var(--gold);border-radius:999px;padding:5px 14px;cursor:pointer;flex:none}
+.lang:hover{background:var(--gold);color:var(--ink)}
 .hero-in{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-direction:row-reverse}
-.avatar{width:clamp(240px,36vw,420px);aspect-ratio:1;border-radius:50%;object-fit:cover;flex:none;opacity:.88;-webkit-mask-image:radial-gradient(circle,#000 60%,transparent 71%);mask-image:radial-gradient(circle,#000 60%,transparent 71%)}
-h1{font-size:clamp(3rem,9vw,6.4rem);line-height:1.1;font-weight:700}
+.avatar{width:clamp(280px,46vw,540px);aspect-ratio:1;border-radius:50%;object-fit:cover;flex:none;opacity:.88;-webkit-mask-image:radial-gradient(circle,#000 60%,transparent 71%);mask-image:radial-gradient(circle,#000 60%,transparent 71%)}
+h1{font-size:clamp(2.8rem,7vw,5rem);line-height:1.1;font-weight:700}
 .lead{max-width:34ch;margin-top:18px;font-size:1.15rem;font-weight:300;color:#cdbf9f}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .btn{padding:12px 26px;border-radius:999px;font-weight:600;transition:transform .15s,background .15s;display:inline-block}
@@ -66,13 +69,13 @@ h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:700;margin-bottom:10px}
 .contact{text-align:center}
 .contact .sub{margin-inline:auto}
 footer{padding:36px 0;text-align:center;font-weight:300;color:#8f8268;font-size:.9rem;border-top:1px solid var(--line)}
-@media(max-width:820px){.about,.vgrid{grid-template-columns:1fr}.hero{min-height:80vh}.topo{right:-40%;width:130vw}.hero-in{flex-direction:column;align-items:flex-start}.hero{padding:30px 0}section{padding:62px 0}}
+@media(max-width:820px){html[dir=ltr] .hero-in{flex-direction:column}.about,.vgrid{grid-template-columns:1fr}.hero{min-height:80vh}.topo{right:-40%;width:130vw}.hero-in{flex-direction:column;align-items:flex-start}.hero{padding:30px 0}section{padding:62px 0}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 <nav><div class="wrap"><a class="logo" href="#home">محمد سمير</a>
-<div class="menu"><a href="#about">عني</a><a href="#videos">فيديوهاتي</a><a href="#articles">مقالاتي</a><a href="#projects">مشاريعي</a><a href="#links">روابطي</a><a href="#contact">تواصل</a></div></div></nav>
+<div class="menu"><a href="#about">عني</a><a href="#videos">فيديوهاتي</a><a href="#articles">مقالاتي</a><a href="#projects">مشاريعي</a><a href="#links">روابطي</a><a href="#contact">تواصل</a></div><button class="lang" id="lang" type="button" aria-label="Language">EN</button></div></nav>
 
 <header class="hero" id="home">
 <svg class="topo" viewBox="0 0 600 600" aria-hidden="true">
@@ -165,6 +168,17 @@ document.querySelectorAll("[data-v]").forEach(el=>{const k=el.dataset.v,id=V[k];
 el.innerHTML=id?`<iframe src="https://www.youtube.com/embed/${id}" title="الفيديو المثبت" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`:`<a href="${CH[k]}" target="_blank" rel="noopener" style="display:flex;height:100%;align-items:center;justify-content:center;background:var(--ink);color:var(--gold2);font-weight:600">افتح القناة على يوتيوب ↗</a>`});
 document.querySelectorAll("[data-list]").forEach(el=>{
 el.innerHTML=D[el.dataset.list].map(([t,s,u])=>`<a class="card" href="${u}" target="_blank" rel="noopener"><span class="t">${t}<i>↗</i></span><small>${s}</small></a>`).join("")});
+</script>
+<script>
+const EN={"عني": "About", "فيديوهاتي": "My videos", "مقالاتي": "Articles", "مشاريعي": "Projects", "روابطي": "Links", "تواصل": "Contact", "محمد سمير": "Muhammad Samir", "أنا محمد سمير": "I'm Muhammad Samir", "© محمد سمير": "© Muhammad Samir", "أهلاً بك. هنا قنواتي ومقالاتي وكل حساباتي في مكان واحد.": "Welcome. My channels, articles and all my accounts in one place.", "شاهد فيديوهاتي": "Watch my videos", "تواصل معي": "Get in touch", "نبذة قصيرة، ويمكن تعديلها في أي وقت.": "A short intro.", "أنا محمد سمير، مصري مقيم في المملكة العربية السعودية. أصوّر وأوثّق الأماكن التراثية والصحراوية وعادات الناس وتقاليدهم من خلال عدستي، وأقدّم على قناة ثانية محتوى عربي يشرح نظم المعلومات الجغرافية والخرائط الرقمية وسوق العمل.": "I'm Muhammad Samir, an Egyptian living in Saudi Arabia. I photograph and document heritage and desert places and the customs and traditions of the people through my lens, and on a second channel I explain GIS, digital maps and the job market in Arabic.", "التصوير والتوثيق": "Photography and documentation", "تراث وسياحة السعودية": "Saudi heritage and tourism", "نظم المعلومات الجغرافية": "GIS", "كورسات ودروس بالعربي": "Courses and lessons in Arabic", "الكتابة": "Writing", "مقالات على CNN بالعربية": "Articles on CNN Arabic", "المجتمع": "Community", "تيليجرام وفيسبوك وبودكاست": "Telegram, Facebook and a podcast", "قناتان على يوتيوب: واحدة للتعليم وواحدة للحياة والتراث في السعودية.": "Two YouTube channels: one for education, one for life and heritage in Saudi Arabia.", "نظم معلومات جغرافية بالعربي": "Arabic GIS", "كورسات ودروس GIS وخرائط رقمية، وحديث عن سوق العمل.": "GIS courses and lessons, digital maps, and talks about the job market.", "عرض القناة على يوتيوب ↗": "View channel on YouTube ↗", "افتح القناة على يوتيوب ↗": "Open channel on YouTube ↗", "محمد سمير Vlogs": "Muhammad Samir Vlogs", "مصري في السعودية: أماكن تراثية وصحراوية وعادات وتقاليد.": "An Egyptian in Saudi Arabia: heritage and desert places, customs and traditions.", "مقالاتي على CNN بالعربية": "My articles on CNN Arabic", "قصص من أماكن في المملكة العربية السعودية. اضغط على أي بطاقة لقراءة المقال.": "Stories from places across Saudi Arabia. Tap a card to read.", "قصر المربع": "Murabba Palace", "مقر الملك عبد العزيز في الرياض": "King Abdulaziz's residence in Riyadh", "سوق الزل": "Souq Al-Zal", "الحراج القديم بمدينة الرياض": "The old auction market in Riyadh", "الوادي الخفي": "The Hidden Valley", "وجهة طبيعية في الرياض": "A natural destination in Riyadh", "أبراج الحمام": "Pigeon Towers", "الدلم، الرياض (فيديو)": "Al-Dalam, Riyadh (video)", "مواقع ومجتمعات عربية في نظم المعلومات الجغرافية والتصوير.": "Arabic websites and communities in GIS and photography.", "موقع نظم معلومات جغرافية بالعربي": "Arabic GIS website", "المدونة الجغرافية: كل ما يخص GIS بالعربية": "The geography blog: everything GIS, in Arabic", "أعمالي على Behance": "My work on Behance", "تصوير وفيديو وتصميم عن التراث السعودي": "Photography, video and design on Saudi heritage", "صفحة نظم معلومات بالعربي": "Arabic GIS page", "مجتمع GIS على فيسبوك": "GIS community on Facebook", "كل حساباتي في مكان واحد. اختر المنصة اللي تناسبك.": "All my accounts in one place. Pick your platform.", "يوتيوب: GIS بالعربي": "YouTube: Arabic GIS", "كورسات ودروس": "Courses and lessons", "يوتيوب: Vlogs": "YouTube: Vlogs", "الحياة والتراث في السعودية": "Life and heritage in Saudi Arabia", "لينكدإن": "LinkedIn", "التواصل المهني": "Professional networking", "إنستجرام": "Instagram", "صور وكواليس": "Photos and behind the scenes", "تيك توك": "TikTok", "مقاطع قصيرة": "Short clips", "فيسبوك": "Facebook", "الحساب الشخصي": "Personal account", "صفحة التصوير الفوتوغرافي": "Photography page", "أعمال التصوير على فيسبوك": "Photography work on Facebook", "ساوند كلاود: البودكاست": "SoundCloud: Podcast", "حلقات تعليمية في نظم المعلومات الجغرافية والمساحة": "Educational episodes on GIS and surveying", "قناة تيليجرام GIS": "GIS Telegram channel", "أخبار ومصادر نظم المعلومات الجغرافية": "GIS news and resources", "مجتمع GIS على تيليجرام": "GIS community on Telegram", "نقاش وأفكار بين المهتمين": "Discussion and ideas among enthusiasts", "خلينا على تواصل": "Let's stay in touch", "أسرع طريقة للتواصل معي عبر لينكدإن أو إنستجرام.": "The quickest way to reach me is LinkedIn or Instagram.", "لينكدإن ↗": "LinkedIn ↗", "إنستجرام ↗": "Instagram ↗"};
+const SRC=new WeakMap(),btn=document.getElementById("lang");
+function setLang(l){document.documentElement.lang=l;document.documentElement.dir=l==="en"?"ltr":"rtl";
+const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),a=[];let n;while(n=w.nextNode())a.push(n);
+a.forEach(n=>{if(n.parentNode.closest("script,style"))return;let ar=SRC.get(n);if(ar===undefined){ar=n.nodeValue;SRC.set(n,ar)}const k=ar.trim();if(EN[k])n.nodeValue=l==="en"?ar.replace(k,EN[k]):ar});
+btn.textContent=l==="en"?"عربي":"EN";document.title=l==="en"?"Muhammad Samir":"محمد سمير";try{localStorage.setItem("lang",l)}catch(e){}}
+btn.addEventListener("click",()=>setLang(document.documentElement.lang==="en"?"ar":"en"));
+let L="ar";try{L=localStorage.getItem("lang")||"ar"}catch(e){}
+if(L==="en")setLang("en");
 </script>
 </body>
 </html>
