@@ -33,7 +33,7 @@ html[dir=ltr] .hero-in{flex-direction:row}
 .hero-in{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-direction:row-reverse}
 .avatar{width:clamp(280px,46vw,540px);aspect-ratio:1;border-radius:50%;object-fit:cover;flex:none;opacity:.88;-webkit-mask-image:radial-gradient(circle,#000 60%,transparent 71%);mask-image:radial-gradient(circle,#000 60%,transparent 71%)}
 h1{font-size:clamp(2.8rem,7vw,5rem);line-height:1.1;font-weight:700}
-.lead{max-width:34ch;margin-top:18px;font-size:1.15rem;font-weight:300;color:#cdbf9f}
+.lead{max-width:46ch;margin-top:18px;font-size:1.15rem;font-weight:300;color:#cdbf9f}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .btn{padding:12px 26px;border-radius:999px;font-weight:600;transition:transform .15s,background .15s;display:inline-block}
 .btn.p{background:var(--gold);color:var(--ink)}
@@ -127,12 +127,13 @@ h2::after{content:"";display:block;width:56px;height:3px;margin-top:10px;border-
 @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
 @keyframes pulse{50%{box-shadow:0 0 34px rgba(235,186,6,.75)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.hero-in>div:last-child>*{opacity:1!important;transform:none!important}.topo path{stroke-dashoffset:0}}
+h1{padding-bottom:.24em;line-height:1.35;margin-bottom:-.06em}
 </style>
 </head>
 <body>
 <div id="bar"></div>
 <nav><div class="wrap"><a class="logo" href="#home">محمد سمير</a>
-<div class="menu"><a href="#about">عني</a><a href="#videos">فيديوهاتي</a><a href="#playlists">قوائم التشغيل</a><a href="#articles">مقالاتي</a><a href="#projects">مشاريعي</a><a href="#links">روابطي</a><a href="#contact">تواصل</a></div><button class="lang" id="lang" type="button" aria-label="Language">EN</button></div></nav>
+<div class="menu"><a href="#about">عني</a><a href="#videos">قنواتي</a><a href="#playlists">قوائم التشغيل</a><a href="#articles">مقالاتي</a><a href="#projects">مشاريعي</a><a href="#links">روابط القنوات</a><a href="#contact">للتواصل</a></div><button class="lang" id="lang" type="button" aria-label="Language">EN</button></div></nav>
 
 <header class="hero" id="home">
 <i class="orb o1"></i><i class="orb o2"></i>
@@ -147,15 +148,15 @@ h2::after{content:"";display:block;width:56px;height:3px;margin-top:10px;border-
 <div class="wrap"><div class="hero-in">
 <div class="ph"><img class="avatar" src="photo.jpg" alt="محمد سمير" onerror="this.style.display='none'"></div>
 <div><h1>أنا محمد سمير</h1>
-<p class="lead">أهلاً بك. هنا قنواتي ومقالاتي وكل حساباتي في مكان واحد.</p>
+<p class="lead">أهلاً بك! يسعدني جداً تواجدك هنا والاطلاع على محفظة أعمالي وقنواتي وحساباتي الشخصية.</p>
 <div class="cta"><a class="btn p" href="#videos">شاهد فيديوهاتي</a><a class="btn s" href="#contact">تواصل معي</a></div></div>
 </div></div>
 </header>
 
 <section id="about"><div class="wrap">
-<h2>عني</h2><p class="sub">نبذة قصيرة، ويمكن تعديلها في أي وقت.</p>
+<h2>عني</h2><p class="sub">نبذة قصيرة</p>
 <div class="about">
-<p>أنا محمد سمير، مصري مقيم في المملكة العربية السعودية. أصوّر وأوثّق الأماكن التراثية والصحراوية وعادات الناس وتقاليدهم من خلال عدستي، وأقدّم على قناة ثانية محتوى عربي يشرح نظم المعلومات الجغرافية والخرائط الرقمية وسوق العمل.</p>
+<p>أنا محمد سمير، مصري مقيم في المملكة العربية السعودية. أصوّر وأوثّق الأماكن التراثية والصحراوية وعادات الناس وتقاليدهم من خلال عدستي، وأقدم عبر قناة نظم معلومات جغرافية بالعربي شروحات للمجالات الجيومكانية والخرائط الرقمية وسوق العمل.</p>
 <div class="facts">
 <div class="fact"><b>التصوير والتوثيق</b><span>تراث وسياحة السعودية</span></div>
 <div class="fact"><b>نظم المعلومات الجغرافية</b><span>كورسات ودروس بالعربي</span></div>
@@ -165,20 +166,20 @@ h2::after{content:"";display:block;width:56px;height:3px;margin-top:10px;border-
 </div></section>
 
 <section class="alt" id="videos" style="padding-bottom:40px"><div class="wrap">
-<h2>فيديوهاتي</h2><p class="sub">قناتان على يوتيوب: واحدة للتعليم وواحدة للحياة والتراث في السعودية.</p>
+<h2>قنواتي</h2><p class="sub">قناتان على يوتيوب: واحدة للتعليم وواحدة للحياة والتراث في السعودية.</p>
 <div class="vgrid">
-<div class="vbox"><h3>نظم معلومات جغرافية بالعربي</h3><p>كورسات ودروس GIS وخرائط رقمية، وحديث عن سوق العمل.</p>
+<div class="vbox"><h3>قناة نظم معلومات جغرافية بالعربية</h3><p>كورسات ودروس GIS وخرائط رقمية، وحديث عن سوق العمل.</p>
 <div class="frame" data-v="gis"></div>
 <a class="more" href="https://www.youtube.com/channel/UCqWJETIRskFKBy00aIjU49g" target="_blank" rel="noopener">عرض القناة على يوتيوب ↗</a></div>
-<div class="vbox g"><h3>محمد سمير Vlogs</h3><p>مصري في السعودية: أماكن تراثية وصحراوية وعادات وتقاليد.</p>
+<div class="vbox g"><h3>قناة محمد سمير للسياحة بالسعودية</h3><p>مصري في السعودية: أماكن تراثية وصحراوية وعادات وتقاليد.</p>
 <div class="frame" data-v="vlogs"></div>
 <a class="more" href="https://www.youtube.com/@MuhammadSamirVlogger" target="_blank" rel="noopener">عرض القناة على يوتيوب ↗</a></div>
 </div></div></section>
 
 <section class="alt" id="playlists" style="padding-top:20px"><div class="wrap">
 <h2>قوائم التشغيل</h2><p class="sub">شاهد أحدث فيديوهات القناتين هنا، واضغط على أي فيديو لتشغيله.</p>
-<div class="pl" data-ch="UCqWJETIRskFKBy00aIjU49g" data-fb="BxXfhPfJ5us"><h3>نظم معلومات جغرافية بالعربي</h3><div class="row"></div><a class="more" href="https://www.youtube.com/@ArabicGIS/playlists" target="_blank" rel="noopener">كل قوائم التشغيل على يوتيوب ↗</a></div>
-<div class="pl" data-ch="UCErIwka9hh-LJilZhZcXV5Q" data-fb="iEc-jIg5oDs"><h3>محمد سمير Vlogs</h3><div class="row"></div><a class="more" href="https://www.youtube.com/@MuhammadSamirVlogger/playlists" target="_blank" rel="noopener">كل قوائم التشغيل على يوتيوب ↗</a></div>
+<div class="pl" data-ch="UCqWJETIRskFKBy00aIjU49g" data-fb="BxXfhPfJ5us"><h3>قناة نظم معلومات جغرافية بالعربية</h3><div class="row"></div><a class="more" href="https://www.youtube.com/@ArabicGIS/playlists" target="_blank" rel="noopener">كل قوائم التشغيل على يوتيوب ↗</a></div>
+<div class="pl" data-ch="UCErIwka9hh-LJilZhZcXV5Q" data-fb="iEc-jIg5oDs"><h3>قناة محمد سمير للسياحة بالسعودية</h3><div class="row"></div><a class="more" href="https://www.youtube.com/@MuhammadSamirVlogger/playlists" target="_blank" rel="noopener">كل قوائم التشغيل على يوتيوب ↗</a></div>
 </div></section>
 
 <section class="art" id="articles"><div class="wrap">
@@ -192,7 +193,7 @@ h2::after{content:"";display:block;width:56px;height:3px;margin-top:10px;border-
 </div></section>
 
 <section id="links"><div class="wrap">
-<h2>روابطي</h2><p class="sub">كل حساباتي في مكان واحد. اختر المنصة اللي تناسبك.</p>
+<h2>روابط الحسابات والقنوات</h2><p class="sub">كل حساباتي في مكان واحد.</p>
 <div class="cards" data-list="links"></div>
 </div></section>
 
@@ -234,7 +235,7 @@ document.querySelectorAll("[data-list]").forEach(el=>{
 el.innerHTML=D[el.dataset.list].map(([t,s,u])=>`<a class="card" href="${u}" target="_blank" rel="noopener"><span class="t">${t}<i>↗</i></span><small>${s}</small></a>`).join("")});
 </script>
 <script>
-const EN={"عني": "About", "فيديوهاتي": "My videos", "مقالاتي": "Articles", "مشاريعي": "Projects", "روابطي": "Links", "تواصل": "Contact", "محمد سمير": "Muhammad Samir", "أنا محمد سمير": "I'm Muhammad Samir", "© محمد سمير": "© Muhammad Samir", "أهلاً بك. هنا قنواتي ومقالاتي وكل حساباتي في مكان واحد.": "Welcome. My channels, articles and all my accounts in one place.", "شاهد فيديوهاتي": "Watch my videos", "تواصل معي": "Get in touch", "نبذة قصيرة، ويمكن تعديلها في أي وقت.": "A short intro.", "أنا محمد سمير، مصري مقيم في المملكة العربية السعودية. أصوّر وأوثّق الأماكن التراثية والصحراوية وعادات الناس وتقاليدهم من خلال عدستي، وأقدّم على قناة ثانية محتوى عربي يشرح نظم المعلومات الجغرافية والخرائط الرقمية وسوق العمل.": "I'm Muhammad Samir, an Egyptian living in Saudi Arabia. I photograph and document heritage and desert places and the customs and traditions of the people through my lens, and on a second channel I explain GIS, digital maps and the job market in Arabic.", "التصوير والتوثيق": "Photography and documentation", "تراث وسياحة السعودية": "Saudi heritage and tourism", "نظم المعلومات الجغرافية": "GIS", "كورسات ودروس بالعربي": "Courses and lessons in Arabic", "الكتابة": "Writing", "مقالات على CNN بالعربية": "Articles on CNN Arabic", "المجتمع": "Community", "تيليجرام وفيسبوك وبودكاست": "Telegram, Facebook and a podcast", "قناتان على يوتيوب: واحدة للتعليم وواحدة للحياة والتراث في السعودية.": "Two YouTube channels: one for education, one for life and heritage in Saudi Arabia.", "نظم معلومات جغرافية بالعربي": "Arabic GIS", "كورسات ودروس GIS وخرائط رقمية، وحديث عن سوق العمل.": "GIS courses and lessons, digital maps, and talks about the job market.", "عرض القناة على يوتيوب ↗": "View channel on YouTube ↗", "افتح القناة على يوتيوب ↗": "Open channel on YouTube ↗", "محمد سمير Vlogs": "Muhammad Samir Vlogs", "مصري في السعودية: أماكن تراثية وصحراوية وعادات وتقاليد.": "An Egyptian in Saudi Arabia: heritage and desert places, customs and traditions.", "مقالاتي على CNN بالعربية": "My articles on CNN Arabic", "قصص من أماكن في المملكة العربية السعودية. اضغط على أي بطاقة لقراءة المقال.": "Stories from places across Saudi Arabia. Tap a card to read.", "قصر المربع": "Murabba Palace", "مقر الملك عبد العزيز في الرياض": "King Abdulaziz's residence in Riyadh", "سوق الزل": "Souq Al-Zal", "الحراج القديم بمدينة الرياض": "The old auction market in Riyadh", "الوادي الخفي": "The Hidden Valley", "وجهة طبيعية في الرياض": "A natural destination in Riyadh", "أبراج الحمام": "Pigeon Towers", "الدلم، الرياض (فيديو)": "Al-Dalam, Riyadh (video)", "مواقع ومجتمعات عربية في نظم المعلومات الجغرافية والتصوير.": "Arabic websites and communities in GIS and photography.", "موقع نظم معلومات جغرافية بالعربي": "Arabic GIS website", "المدونة الجغرافية: كل ما يخص GIS بالعربية": "The geography blog: everything GIS, in Arabic", "أعمالي على Behance": "My work on Behance", "تصوير وفيديو وتصميم عن التراث السعودي": "Photography, video and design on Saudi heritage", "صفحة نظم معلومات بالعربي": "Arabic GIS page", "مجتمع GIS على فيسبوك": "GIS community on Facebook", "كل حساباتي في مكان واحد. اختر المنصة اللي تناسبك.": "All my accounts in one place. Pick your platform.", "يوتيوب: GIS بالعربي": "YouTube: Arabic GIS", "كورسات ودروس": "Courses and lessons", "يوتيوب: Vlogs": "YouTube: Vlogs", "الحياة والتراث في السعودية": "Life and heritage in Saudi Arabia", "لينكدإن": "LinkedIn", "التواصل المهني": "Professional networking", "إنستجرام": "Instagram", "صور وكواليس": "Photos and behind the scenes", "تيك توك": "TikTok", "مقاطع قصيرة": "Short clips", "فيسبوك": "Facebook", "الحساب الشخصي": "Personal account", "صفحة التصوير الفوتوغرافي": "Photography page", "أعمال التصوير على فيسبوك": "Photography work on Facebook", "ساوند كلاود: البودكاست": "SoundCloud: Podcast", "حلقات تعليمية في نظم المعلومات الجغرافية والمساحة": "Educational episodes on GIS and surveying", "قناة تيليجرام GIS": "GIS Telegram channel", "أخبار ومصادر نظم المعلومات الجغرافية": "GIS news and resources", "مجتمع GIS على تيليجرام": "GIS community on Telegram", "نقاش وأفكار بين المهتمين": "Discussion and ideas among enthusiasts", "خلينا على تواصل": "Let's stay in touch", "كل قوائم التشغيل على يوتيوب ↗":"All playlists on YouTube ↗","قوائم التشغيل":"Playlists","شاهد أحدث فيديوهات القناتين هنا، واضغط على أي فيديو لتشغيله.":"Watch the latest videos from both channels here, and tap any video to play it.","أسرع طريقة للتواصل معي عبر لينكدإن أو إنستجرام.": "The quickest way to reach me is LinkedIn or Instagram.", "لينكدإن ↗": "LinkedIn ↗", "إنستجرام ↗": "Instagram ↗"};
+const EN={"عني": "About", "قنواتي": "My channels", "مقالاتي": "Articles", "مشاريعي": "Projects", "روابط القنوات": "Channel links", "روابط الحسابات والقنوات": "Account and channel links", "للتواصل": "Contact", "محمد سمير": "Muhammad Samir", "أنا محمد سمير": "I'm Muhammad Samir", "© محمد سمير": "© Muhammad Samir", "أهلاً بك! يسعدني جداً تواجدك هنا والاطلاع على محفظة أعمالي وقنواتي وحساباتي الشخصية.": "Welcome! I'm delighted to have you here to explore my portfolio, my channels and my personal accounts.", "شاهد فيديوهاتي": "Watch my videos", "تواصل معي": "Get in touch", "نبذة قصيرة": "Short intro", "أنا محمد سمير، مصري مقيم في المملكة العربية السعودية. أصوّر وأوثّق الأماكن التراثية والصحراوية وعادات الناس وتقاليدهم من خلال عدستي، وأقدم عبر قناة نظم معلومات جغرافية بالعربي شروحات للمجالات الجيومكانية والخرائط الرقمية وسوق العمل.": "I'm Muhammad Samir, an Egyptian living in Saudi Arabia. I photograph and document heritage and desert places and the customs and traditions of the people through my lens, and through the Arabic GIS channel I present explanations of geospatial fields, digital maps and the job market.", "التصوير والتوثيق": "Photography and documentation", "تراث وسياحة السعودية": "Saudi heritage and tourism", "نظم المعلومات الجغرافية": "GIS", "كورسات ودروس بالعربي": "Courses and lessons in Arabic", "الكتابة": "Writing", "مقالات على CNN بالعربية": "Articles on CNN Arabic", "المجتمع": "Community", "تيليجرام وفيسبوك وبودكاست": "Telegram, Facebook and a podcast", "قناتان على يوتيوب: واحدة للتعليم وواحدة للحياة والتراث في السعودية.": "Two YouTube channels: one for education, one for life and heritage in Saudi Arabia.", "قناة نظم معلومات جغرافية بالعربية": "Arabic GIS channel", "كورسات ودروس GIS وخرائط رقمية، وحديث عن سوق العمل.": "GIS courses and lessons, digital maps, and talks about the job market.", "عرض القناة على يوتيوب ↗": "View channel on YouTube ↗", "افتح القناة على يوتيوب ↗": "Open channel on YouTube ↗", "قناة محمد سمير للسياحة بالسعودية": "Muhammad Samir Saudi Tourism channel", "مصري في السعودية: أماكن تراثية وصحراوية وعادات وتقاليد.": "An Egyptian in Saudi Arabia: heritage and desert places, customs and traditions.", "مقالاتي على CNN بالعربية": "My articles on CNN Arabic", "قصص من أماكن في المملكة العربية السعودية. اضغط على أي بطاقة لقراءة المقال.": "Stories from places across Saudi Arabia. Tap a card to read.", "قصر المربع": "Murabba Palace", "مقر الملك عبد العزيز في الرياض": "King Abdulaziz's residence in Riyadh", "سوق الزل": "Souq Al-Zal", "الحراج القديم بمدينة الرياض": "The old auction market in Riyadh", "الوادي الخفي": "The Hidden Valley", "وجهة طبيعية في الرياض": "A natural destination in Riyadh", "أبراج الحمام": "Pigeon Towers", "الدلم، الرياض (فيديو)": "Al-Dalam, Riyadh (video)", "مواقع ومجتمعات عربية في نظم المعلومات الجغرافية والتصوير.": "Arabic websites and communities in GIS and photography.", "موقع نظم معلومات جغرافية بالعربي": "Arabic GIS website", "المدونة الجغرافية: كل ما يخص GIS بالعربية": "The geography blog: everything GIS, in Arabic", "أعمالي على Behance": "My work on Behance", "تصوير وفيديو وتصميم عن التراث السعودي": "Photography, video and design on Saudi heritage", "صفحة نظم معلومات بالعربي": "Arabic GIS page", "مجتمع GIS على فيسبوك": "GIS community on Facebook", "كل حساباتي في مكان واحد.": "All my accounts in one place.", "يوتيوب: GIS بالعربي": "YouTube: Arabic GIS", "كورسات ودروس": "Courses and lessons", "يوتيوب: Vlogs": "YouTube: Vlogs", "الحياة والتراث في السعودية": "Life and heritage in Saudi Arabia", "لينكدإن": "LinkedIn", "التواصل المهني": "Professional networking", "إنستجرام": "Instagram", "صور وكواليس": "Photos and behind the scenes", "تيك توك": "TikTok", "مقاطع قصيرة": "Short clips", "فيسبوك": "Facebook", "الحساب الشخصي": "Personal account", "صفحة التصوير الفوتوغرافي": "Photography page", "أعمال التصوير على فيسبوك": "Photography work on Facebook", "ساوند كلاود: البودكاست": "SoundCloud: Podcast", "حلقات تعليمية في نظم المعلومات الجغرافية والمساحة": "Educational episodes on GIS and surveying", "قناة تيليجرام GIS": "GIS Telegram channel", "أخبار ومصادر نظم المعلومات الجغرافية": "GIS news and resources", "مجتمع GIS على تيليجرام": "GIS community on Telegram", "نقاش وأفكار بين المهتمين": "Discussion and ideas among enthusiasts", "خلينا على تواصل": "Let's stay in touch", "كل قوائم التشغيل على يوتيوب ↗":"All playlists on YouTube ↗","قوائم التشغيل":"Playlists","شاهد أحدث فيديوهات القناتين هنا، واضغط على أي فيديو لتشغيله.":"Watch the latest videos from both channels here, and tap any video to play it.","أسرع طريقة للتواصل معي عبر لينكدإن أو إنستجرام.": "The quickest way to reach me is LinkedIn or Instagram.", "لينكدإن ↗": "LinkedIn ↗", "إنستجرام ↗": "Instagram ↗"};
 const SRC=new WeakMap(),btn=document.getElementById("lang");
 function setLang(l){document.documentElement.lang=l;document.documentElement.dir=l==="en"?"ltr":"rtl";
 const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),a=[];let n;while(n=w.nextNode())a.push(n);
